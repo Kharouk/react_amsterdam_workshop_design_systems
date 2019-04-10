@@ -6,11 +6,11 @@ import { space, themeGet } from 'styled-system';
  * A text heading.
  */
 const Heading = styled.h1`
-	margin: ${props => props.m};
-	margin-top: ${props => props.mt};
-	margin-right: ${props => props.mr};
-	margin-left: ${props => props.ml};
-	margin-bottom: ${props => props.mb};
+	margin: ${props => props.theme.space[props.m]};
+	margin-top: ${props => props.theme.space[props.mt]};
+	margin-right: ${props => props.theme.space[props.mr]};
+	margin-left: ${props => props.theme.space[props.ml]};
+	margin-bottom: ${props => props.theme.space[props.mb]};
 	line-height: 1.2;
 	font-weight: ${props => props.theme.headingFontWeights[props.size]};
 	font-size: ${props => themeGet(`fontSizes.${props.size}`)};
