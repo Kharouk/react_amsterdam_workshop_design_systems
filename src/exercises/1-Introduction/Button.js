@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * The most simple button.
+ * The most complex button.
  */
 const Button = ({ children, ...props }) => {
 	return <button {...props}>{children}</button>;
@@ -14,7 +14,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-	children: 'Anonymous button',
+	children: 'Real button',
 };
 
 export default Button;
