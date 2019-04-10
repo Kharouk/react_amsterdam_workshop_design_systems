@@ -1,18 +1,37 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { space } from 'styled-system';
+import { space, themeGet } from 'styled-system';
 
 /**
  * A text heading.
  */
 const Heading = styled.h1`
-	/* Your styles here */
+	margin: ${props => props.m};
+	margin-top: ${props => props.mt};
+	margin-right: ${props => props.mr};
+	margin-left: ${props => props.ml};
+	margin-bottom: ${props => props.mb};
+	line-height: 1.2;
+	font-weight: ${props => props.theme.headingFontWeights[props.size]};
+	font-size: ${props => themeGet(`fontSizes.${props.size}`)};
+	color: ${themeGet('colors.base')};
+	font-family: ${themeGet('fonts.heading')};
 `;
 
 Heading.propTypes = {
 	/** Custom component or HTML tag */
 	as: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
 	size: PropTypes.oneOf(['xxxl', 'xxl', 'xl', 'l', 'm']),
+	/** Set custom margin */
+	m: PropTypes.number,
+	/** Set custom margin-top */
+	mt: PropTypes.number,
+	/** Set custom margin-right */
+	mr: PropTypes.number,
+	/** Set custom margin-left */
+	ml: PropTypes.number,
+	/** Set custom margin-bottom */
+	mb: PropTypes.number,
 	children: PropTypes.node,
 };
 

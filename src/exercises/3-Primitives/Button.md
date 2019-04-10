@@ -10,10 +10,12 @@ Disabled button:
 <Button disabled>Can’t touch this</Button>
 ```
 
-Primary button:
+Primary button disguising anchor tag:
 
 ```jsx harmony
-<Button variant="primary">Push me</Button>
+<Button variant="primary" as="a" href="/">
+  Push me
+</Button>
 ```
 
 Disabled primary button:
