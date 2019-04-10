@@ -10,11 +10,12 @@ import { space, themeGet } from 'styled-system';
  */
 const Heading = styled.h1`
 	${space};
+	/* not needed because of space: */
 	/* margin: ${props => props.theme.space[props.m]}; */
 	/* margin-top: ${props => props.theme.space[props.mt]}; */
 	/* margin-right: ${props => props.theme.space[props.mr]}; */
-	margin-left: ${props => props.theme.space[props.ml]};
-	margin-bottom: ${props => props.theme.space[props.mb]};
+	/* margin-left: ${props => props.theme.space[props.ml]};
+	margin-bottom: ${props => props.theme.space[props.mb]}; */
 	line-height: 1.2;
 	font-weight: ${props => props.theme.headingFontWeights[props.size]};
 	font-size: ${props => themeGet(`fontSizes.${props.size}`)};
@@ -29,13 +30,14 @@ Heading.propTypes = {
 	/** Set custom margin */
 	m: PropTypes.number,
 	/** Set custom margin-top */
-	// mt: PropTypes.number,
+	mt: PropTypes.number,
 	/** Set custom margin-right */
 	mr: PropTypes.number,
 	/** Set custom margin-left */
 	ml: PropTypes.number,
 	/** Set custom margin-bottom */
 	mb: PropTypes.number,
+	/** Text to be Displayed */
 	children: PropTypes.node,
 };
 
