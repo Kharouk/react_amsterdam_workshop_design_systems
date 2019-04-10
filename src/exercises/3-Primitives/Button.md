@@ -23,3 +23,15 @@ Disabled primary button:
   Can’t touch this
 </Button>
 ```
+
+Secondary button:
+
+```jsx harmony
+<Button>Push me</Button>
+```
+
+Disabled secondary button:
+
+```jsx harmony
+<Button disabled>Can’t touch this</Button>
+```
